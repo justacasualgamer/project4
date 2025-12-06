@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            background-color: rgb(77, 77, 77);
+        }
+        #query {
+            resize: none;
+            display: block;
+        }
+        .text {
+            font-family: 'Montserrat';
+            margin: auto;
+            text-align: center;
+            font-size: large;
+            border-radius: 9px;
+        }
+        #nutton {
+            border: 2px solid red;
+            color: white;
+            border-radius: 10px;
+            width: 140px;
+            margin: 10px auto;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        #nutton:hover {
+            background-color: red;
+            transform: translateY(-1.5px);
+        }
+        .footer {
+            text-align: center;
+            font-family: 'Montserrat';
+            color: white;
+            display: block;
+            margin: auto;
+        }
+        #noscript  {
+            background-color: gray;
+            border: 1px solid white;
+            color: white;
+            font-family: 'Montserrat';
+            text-align: center;
+        }
+        span {
+            color: azure;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text" style="color: white; font-size: 40px;">GitHub Project 4</h1>
+    <textarea name="query" id="query" cols="40" rows="10" class="text" placeholder="type your search query here"></textarea>
+    <div id="nutton" onclick="google()">
+        <h1 class="text">Search</h1>
+    </div>
+    <script>
+        function google() {
+            const a = document.getElementById("query").value;
+            const link = "https://google.com/search?q=" + a;
+            console.log(link);
+            location.href = link;
+        }
+    </script>
+    <noscript>
+        <div id="noscript">
+            <h1>where's my <span>JAVASCRIPT</span></h1>
+        </div>
+    </noscript>
+    <footer>
+        <hr> <!--Horizontal Rule-->
+        <p class="footer">This is my 4th project related mostly to styling, I guess so.</p>
+        <a href="https://github.com/justacasualgamer/" class="footer">GitHub</a>
+    </footer>
+</body>
+</html>
